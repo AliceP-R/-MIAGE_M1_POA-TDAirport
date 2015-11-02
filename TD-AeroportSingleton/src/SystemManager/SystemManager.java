@@ -1,6 +1,7 @@
 package SystemManager;
 
-import Elements.Airport;
+import Elements.*;
+
 import java.util.HashSet;
 
 /**
@@ -39,7 +40,24 @@ public class SystemManager
     }
     // endregion
 
+    public void test()
+    {
+        FlightSection fs = new FlightSection(SeatClass.BUSI, 3,5);
+    }
+
+ //    cr´ee  une  sec- tion tarifaire, de classe s, pour un vol identifi´e par flID, associ´e `a une compagnie air, en invoquant l’op´eration createSection() de la classe Airline. La section contiendra le nombre de lignes et de colonnes.
+
+
+    //region Section
     /*
+
+
+    private void createSection(String air, String flID, int rows, int cols, SeatClass s)
+    {
+
+    }
+    //endregion
+
     private void createAirline()
     {
 
@@ -49,10 +67,7 @@ public class SystemManager
 
     }
 
-    private void createSection()
-    {
 
-    }
 
     private void ?ndAvailableFlights()
     {

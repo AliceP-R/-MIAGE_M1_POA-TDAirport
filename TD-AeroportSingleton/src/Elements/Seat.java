@@ -8,6 +8,12 @@ public class Seat
     private SeatID seatNum;
     private boolean isBooked;
 
+    public Seat(SeatID seatNum)
+    {
+        this.seatNum = seatNum;
+        this.isBooked = false;
+    }
+
 
     public SeatID getSeatNum()
     {
@@ -16,7 +22,19 @@ public class Seat
 
     public boolean getStatus()
     {
-        return isBooked; 
+        return isBooked;
     }
 
+    public void booked()
+    {
+        this.isBooked = true;
+    }
+
+    @Override
+    public String toString() {
+        return "Seat{" +
+                "seatNum=" + seatNum +
+                ", isBooked=" + isBooked +
+                '}';
+    }
 }

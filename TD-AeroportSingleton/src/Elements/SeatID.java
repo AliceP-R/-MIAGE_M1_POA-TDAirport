@@ -7,4 +7,10 @@ public class SeatID
 {
     private int ligne;
     private char colonne;
+
+    public SeatID(int ligne, char colonne)
+    {
+        this.ligne = ligne;
+        this.colonne = colonne;
+    }
 }
