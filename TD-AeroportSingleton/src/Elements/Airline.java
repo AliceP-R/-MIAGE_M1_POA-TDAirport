@@ -13,6 +13,6 @@ public class Airline
 
     private Flight createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
     {
-
+        return new Flight();
     }
 }
