@@ -12,9 +12,5 @@ public class Airline
     private int identifiant;
     private List<Flight> listeVol = new ArrayList<Flight>();
 
-    // : cr´ee un vol pour une compagnie a´erienne.
-    public Flight  createFlight(String  orig,  String  dest,  Calendar date,  String  id)
-    {
-        return new Flight();
-    }
+
 }
