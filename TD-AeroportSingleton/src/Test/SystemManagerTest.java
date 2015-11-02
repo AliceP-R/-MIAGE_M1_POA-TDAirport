@@ -17,6 +17,7 @@ public class SystemManagerTest {
     @BeforeClass
     public void setUp() throws Exception
     {
+        //region données création airport
         sm = SystemManager.getInstance();
         sm.createAirport("AZE");
         sm.createAirport("AZ");
@@ -27,6 +28,7 @@ public class SystemManagerTest {
         sm.createAirport("Z");
         sm.createAirport("ZAERT");
         sm.createAirport("EAZ");
+        //endregion
     }
 
     @AfterClass

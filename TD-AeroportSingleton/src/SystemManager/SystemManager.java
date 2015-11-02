@@ -9,19 +9,21 @@ import java.util.HashSet;
  */
 public class SystemManager
 {
+    //region Methodes Singleton
     private static SystemManager ourInstance = new SystemManager();
-
     public static SystemManager getInstance() {
         return ourInstance;
     }
+    //endregion
 
+    //Constructeur
+    private SystemManager(){}
+
+    //region Airport
+    private HashSet<Airport> listeaero = new HashSet<>();
     public HashSet<Airport> getListeaero() {
         return listeaero;
     }
-
-    private HashSet<Airport> listeaero = new HashSet<>();
-    private SystemManager(){}
-
     public void createAirport(String code)
     {
         Airport test = new Airport(code);
@@ -35,6 +37,7 @@ public class SystemManager
         else
             listeaero.add(new Airport(code));
     }
+    // endregion
 
     /*
     private void createAirline()

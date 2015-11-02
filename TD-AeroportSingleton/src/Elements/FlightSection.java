@@ -15,12 +15,14 @@ public class FlightSection
     private int ligne;
     private int colonne;
 
+    // Constructeur
     public FlightSection(SeatClass section, int ligne, int colonne) {
         this.section = section;
         this.ligne = ligne;
         this.colonne = colonne;
     }
 
+    //region Accesseurs
     public SeatClass getSection()
     {
         return section;
@@ -30,6 +32,7 @@ public class FlightSection
     {
         this.section = section;
     }
+    //endregion
 
     public Boolean hasAvailableSeat()
     {
@@ -40,6 +43,7 @@ public class FlightSection
     {
         return true;
     }
+
 
 
 }
