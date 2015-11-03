@@ -69,8 +69,8 @@
       <file leaf-file-name="Airline.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Elements/Airline.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47803164">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.6274165">
+              <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#245#253#0" expanded="true" />
@@ -85,10 +85,11 @@
         <entry file="file://$PROJECT_DIR$/src/Elements/Flight.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="n#!!doc;n#getDestination#0;n#Flight#0" expanded="false" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#724#725#0" expanded="true" />
                 <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
                 <element signature="method#createSection#0;class#Flight#0" expanded="false" />
               </folding>
@@ -162,9 +163,9 @@
         <option value="$PROJECT_DIR$/src/Elements/Seat.java" />
         <option value="$PROJECT_DIR$/src/Elements/FlightSection.java" />
         <option value="$PROJECT_DIR$/src/Test/SystemManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/Elements/Flight.java" />
-        <option value="$PROJECT_DIR$/src/Elements/Airline.java" />
         <option value="$PROJECT_DIR$/src/SystemManager/SystemManager.java" />
+        <option value="$PROJECT_DIR$/src/Elements/Airline.java" />
+        <option value="$PROJECT_DIR$/src/Elements/Flight.java" />
       </list>
     </option>
   </component>
@@ -619,12 +620,12 @@
       <workItem from="1446453105891" duration="13000" />
       <workItem from="1446453192745" duration="17337000" />
       <workItem from="1446495636588" duration="4133000" />
-      <workItem from="1446541262883" duration="507000" />
+      <workItem from="1446541262883" duration="796000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21990000" />
+    <option name="totallyTimeSpent" value="22279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
@@ -765,7 +766,8 @@
           <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#getDestination#0;n#Flight#0" expanded="false" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
             <element signature="method#createSection#0;class#Flight#0" expanded="false" />
           </folding>
@@ -858,7 +860,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#getDestination#0;n#Flight#0" expanded="false" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
             <element signature="method#createSection#0;class#Flight#0" expanded="false" />
           </folding>
@@ -952,19 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Elements/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#getDestination#0;n#Flight#0" expanded="false" />
-            <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="method#createSection#0;class#Flight#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Elements/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1005,10 +995,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Elements/Flight.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
+            <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
+            <element signature="method#createSection#0;class#Flight#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Elements/Airline.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47803164">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.6274165">
+          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#245#253#0" expanded="true" />

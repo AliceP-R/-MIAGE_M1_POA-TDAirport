@@ -12,11 +12,11 @@ public class Flight
     private String ID;
     private Calendar date;
     private Airline al;
-    private Airport origine;
-    private Airport destination;
+    private String origine;
+    private String destination;
     private HashSet<FlightSection> l_section;
 
-    public Flight(String ID, Calendar date, Airline al, Airport origine, Airport destination) {
+    public Flight(String ID, Calendar date, Airline al, String origine, String destination) {
         this.ID = ID;
         this.date = date;
         this.al = al;
@@ -26,7 +26,7 @@ public class Flight
     }
 
     //region Accesseurs
-    public Airport getDestination() {
+    public String getDestination() {
         return destination;
     }
 
@@ -42,7 +42,7 @@ public class Flight
         return al;
     }
 
-    public Airport getOrigine() {
+    public String getOrigine() {
         return origine;
     }
     //endregion

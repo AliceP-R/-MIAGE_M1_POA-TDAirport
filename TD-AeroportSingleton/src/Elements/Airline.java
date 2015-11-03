@@ -16,4 +16,9 @@ public class Airline
     public Airline(String identifiant) {
         this.identifiant = identifiant;
     }
+
+    public Flight createFlight(String ori, String dest, Calendar date, String id)
+    {
+        return new Flight(id, date, this, ori, dest);
+    }
 }
