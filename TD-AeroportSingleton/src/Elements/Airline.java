@@ -9,8 +9,11 @@ import java.util.List;
  */
 public class Airline
 {
-    private int identifiant;
+    private String identifiant;
     private List<Flight> listeVol = new ArrayList<Flight>();
 
 
+    public Airline(String identifiant) {
+        this.identifiant = identifiant;
+    }
 }

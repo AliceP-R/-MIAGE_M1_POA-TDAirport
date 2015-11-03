@@ -38,13 +38,13 @@ public class SystemManagerTest {
     }
 
     @Test
-    public void testNonDoublon() throws Exception
+    public void testNonDoublonAero() throws Exception
     {
         assertEquals(sm.getListeaero().size(), 4);
     }
 
     @Test
-    public void testTailleOk() throws Exception
+    public void testTailleOkAero() throws Exception
     {
         Iterator i=sm.getListeaero().iterator();
         while(i.hasNext())

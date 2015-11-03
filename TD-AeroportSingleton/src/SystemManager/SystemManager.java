@@ -25,6 +25,7 @@ public class SystemManager
     public HashSet<Airport> getListeaero() {
         return listeaero;
     }
+
     public void createAirport(String code)
     {
         Airport test = new Airport(code);
@@ -39,6 +40,23 @@ public class SystemManager
             listeaero.add(new Airport(code));
     }
     // endregion
+
+    //region Airline
+    private HashSet<Airline> listeairl = new HashSet<>();
+    public void createAirline(String nom)
+    {
+        Airline test = new Airline(nom);
+
+        if(nom.length() != 5)
+            System.err.println("Votre code n'a pas le bon nombre de caractères");
+
+        else if(listeairl.contains(test))
+            System.err.println("Ce code existe déjà");
+
+        else
+            listeairl.add(new Airline(nom));
+    }
+    //endregion
 
     public void test()
     {
