@@ -36,8 +36,8 @@ public class SystemManagerTest {
         //region données création airline
         sm.createAirline("DELTA");
         sm.createAirline("AIRFR");
-        sm.createAirline("AMER"); // Invalide
-        sm.createAirline("JET"); // Invalide
+        sm.createAirline("AMER");
+        sm.createAirline("JET");
         sm.createAirline("DELTA"); // Unicité
         sm.createAirline("SWEST");
         sm.createAirline("FRONTIER"); // Invalide
@@ -60,7 +60,7 @@ public class SystemManagerTest {
     public void testNonDoublon() throws Exception
     {
         assertEquals(sm.getListeaero().size(), 6); // Airport
-        assertEquals(sm.getListeairl().size(), 3); // Airline
+        assertEquals(sm.getListeairl().size(), 5); // Airline
     }
 
     @Test
@@ -80,7 +80,9 @@ public class SystemManagerTest {
         i=sm.getListeairl().iterator();
         while(i.hasNext())
         {
-            assertEquals(((Airline)i.next()).getIdentifiant().length(), 5);
+            boolean taille;
+            taille = ((Airline)i.next()).getIdentifiant().length() <= 5;
+            assertEquals(taille, true);
         }
         //endregion
     }

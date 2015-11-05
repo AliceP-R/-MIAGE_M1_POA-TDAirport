@@ -132,12 +132,16 @@ public class Flight
         return ID.hashCode();
     }
 
+    private String afficheDate()
+    {
+        return ""+date.DAY_OF_MONTH+"/"+date.MONTH+"/"+date.YEAR;
+    }
     @Override
     public String toString()
     {
         return "Flight{" +
                 "ID='" + ID + '\'' +
-                ", date=" + date +
+                ", date=" + afficheDate() +
                 ", al=" + al +
                 ", origine=" + origine +
                 ", destination=" + destination +

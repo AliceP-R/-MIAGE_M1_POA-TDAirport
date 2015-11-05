@@ -34,7 +34,6 @@ public class FlightSection
                 SeatID st = new SeatID(i, c);
                 c++;
                 Seat s = new Seat(st);
-                System.out.println(s.toString());
                 l_siege.add(s);
             }
         }

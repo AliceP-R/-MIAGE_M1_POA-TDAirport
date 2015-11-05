@@ -10,6 +10,11 @@ public class Airline
 
 
     private String identifiant;
+
+    public HashSet<Flight> getListeVol() {
+        return listeVol;
+    }
+
     private HashSet<Flight> listeVol = new HashSet<>();
     private HashSet<Airport> listeAirport = new HashSet<>();
 
@@ -44,6 +49,21 @@ public class Airline
         return null;
     }
 
+    public Flight findFlight(String id)
+    {
+        Flight vol=null;
+        Iterator it = listeVol.iterator();
+        while(it.hasNext())
+        {
+            vol = (Flight)it.next();
+            if(vol.getID() == id)
+                return vol;
+            else
+                vol = null;
+        }
+        return vol;
+    }
+
     public Flight createFlight(String ori, String dest, Calendar date, String id)
     {
         Airport origine = findAirport(ori);
@@ -75,11 +95,19 @@ public class Airline
         return vol;
     }
 
+    public void createSection(String  flID, int rows,  int cols,  SeatClass  s)
+    {
+        Flight vol = findFlight(flID);
+        if(vol == null)
+            System.err.println("Ce vol n'existe pas.");
+        else
+            vol.createSection(rows, cols, s);
+    }
+
     @Override
     public String toString() {
         return "Airline{" +
-                "identifiant='" + identifiant + '\'' +
-                ", listeVol=" + listeVol +
+                "identifiant='" + identifiant+
                 '}';
     }
 

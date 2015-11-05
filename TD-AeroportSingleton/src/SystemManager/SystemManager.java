@@ -51,8 +51,8 @@ public class SystemManager
     {
         Airline test = new Airline(nom, listeaero);
 
-        if(nom.length() != 5)
-            System.err.println("Votre code n'a pas 5 caract\u00e8res");
+        if(nom.length() > 5)
+            System.err.println("Votre code a trop de caract\u00e8res");
 
         else if(listeairl.contains(test))
             System.err.println("Ce code existe déjà.");
@@ -92,27 +92,22 @@ public class SystemManager
         }
 
     }
-
     //endregion
 
- //    cr´ee  une  sec- tion tarifaire, de classe s, pour un vol identifi´e par flID, associ´e `a une compagnie air, en invoquant l’op´eration createSection() de la classe Airline. La section contiendra le nombre de lignes et de colonnes.
-
-
     //region Section
-    /*
-
-
-    private void createSection(String air, String flID, int rows, int cols, SeatClass s)
+    public void createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s)
     {
-
+        Airline ligne = trouverAirline(air);
+        if(ligne != null)
+            ligne.createSection(flID, rows, cols, s);
+        else
+            System.err.println("Cette compagnie n'existe pas.");
     }
     //endregion
 
 
-
-
-
-    private void ?ndAvailableFlights()
+    //region Section
+    private void finndAvailableFlights()
     {
 
     }
@@ -122,9 +117,38 @@ public class SystemManager
 
     }
 
-    private void displaySystemDetails()
+    public void displaySystemDetails()
     {
 
+        //region affiche aéroports
+        System.out.println("Liste des aéroports :");
+        System.out.println("----------------------------------");
+        Iterator it_aero = listeaero.iterator();
+        while(it_aero.hasNext())
+        {
+            System.out.println(((Airport)it_aero.next()).toString());
+        }
+        System.out.println("----------------------------------");
+        //endregion
+
+        //region affiche airline
+        Iterator it_air = listeairl.iterator();
+        Iterator it_compagnie;
+        Airline compagnie;
+        Flight vol;
+        while(it_air.hasNext())
+        {
+            compagnie = (Airline)it_air.next();
+            System.out.println("Pour la compagnie" + compagnie.getIdentifiant());
+            it_compagnie = compagnie.getListeVol().iterator();
+            while(it_compagnie.hasNext())
+            {
+                vol = (Flight) it_compagnie.next();
+                System.out.println(vol.toString());
+            }
+            System.out.println("---------------------------------");
+        }
+        //endregion
+
     }
-    */
 }
