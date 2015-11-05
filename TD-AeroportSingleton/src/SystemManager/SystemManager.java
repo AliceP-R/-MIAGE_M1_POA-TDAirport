@@ -43,18 +43,22 @@ public class SystemManager
 
     //region Airline
     private HashSet<Airline> listeairl = new HashSet<>();
+    public HashSet<Airline> getListeairl()
+    {
+        return listeairl;
+    }
     public void createAirline(String nom)
     {
-        Airline test = new Airline(nom);
+        Airline test = new Airline(nom, listeaero);
 
         if(nom.length() != 5)
-            System.err.println("Votre code n'a pas le bon nombre de caractères");
+            System.err.println("Votre code n'a pas 5 caract\u00e8res");
 
         else if(listeairl.contains(test))
-            System.err.println("Ce code existe déjà");
+            System.err.println("Ce code existe déjà.");
 
         else
-            listeairl.add(new Airline(nom));
+            listeairl.add(new Airline(nom, listeaero));
     }
     //endregion
 

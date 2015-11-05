@@ -12,11 +12,11 @@ public class Flight
     private String ID;
     private Calendar date;
     private Airline al;
-    private String origine;
-    private String destination;
+    private Airport origine;
+    private Airport destination;
     private HashSet<FlightSection> l_section;
 
-    public Flight(String ID, Calendar date, Airline al, String origine, String destination) {
+    public Flight(String ID, Calendar date, Airline al, Airport origine, Airport destination) {
         this.ID = ID;
         this.date = date;
         this.al = al;
@@ -26,7 +26,7 @@ public class Flight
     }
 
     //region Accesseurs
-    public String getDestination() {
+    public Airport getDestination() {
         return destination;
     }
 
@@ -42,7 +42,7 @@ public class Flight
         return al;
     }
 
-    public String getOrigine() {
+    public Airport getOrigine() {
         return origine;
     }
     //endregion
@@ -113,12 +113,39 @@ public class Flight
 
         return res;
     }
-/*
-    +
 
-    +createSection(): Boolean
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flight flight = (Flight) o;
+
+        return ID.equals(flight.ID);
+
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return ID.hashCode();
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Flight{" +
+                "ID='" + ID + '\'' +
+                ", date=" + date +
+                ", al=" + al +
+                ", origine=" + origine +
+                ", destination=" + destination +
+                '}';
+    }
+    /*
+    +
     +?ndSection(): FlightSection
-    +bookSeat()
     */
 
 }
