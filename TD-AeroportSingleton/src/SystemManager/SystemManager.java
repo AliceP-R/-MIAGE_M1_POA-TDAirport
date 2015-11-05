@@ -2,7 +2,7 @@ package SystemManager;
 
 import Elements.*;
 
-import java.util.HashSet;
+import java.util.*;
 
 /**
  * Created by Alice on 02/11/2015.
@@ -62,10 +62,38 @@ public class SystemManager
     }
     //endregion
 
-    public void test()
+    //region Flight
+    private Airline trouverAirline(String n)
     {
-        FlightSection fs = new FlightSection(SeatClass.BUSI, 3,5);
+        Iterator it = listeairl.iterator();
+        Airline parcours;
+        while(it.hasNext())
+        {
+            parcours = (Airline) it.next();
+            if(parcours.getIdentifiant().equals(n))
+            {
+                return parcours;
+            }
+        }
+
+        return null;
     }
+    public void createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
+    {
+        Airline ligne = trouverAirline(n);
+        if(ligne == null)
+        {
+            System.err.println("Cette compagnie a\u00e9rienne n'existe pas");
+        }
+        else
+        {
+            Calendar date = new GregorianCalendar(year, month, day);
+            Flight vol = ligne.createFlight(orig, dest, date, id);
+        }
+
+    }
+
+    //endregion
 
  //    cr´ee  une  sec- tion tarifaire, de classe s, pour un vol identifi´e par flID, associ´e `a une compagnie air, en invoquant l’op´eration createSection() de la classe Airline. La section contiendra le nombre de lignes et de colonnes.
 
@@ -80,14 +108,7 @@ public class SystemManager
     }
     //endregion
 
-    private void createAirline()
-    {
 
-    }
-    private void createFlight()
-    {
-
-    }
 
 
 

@@ -14,15 +14,20 @@ public class Airline
     private HashSet<Airport> listeAirport = new HashSet<>();
 
 
+    // Constructeur
     public Airline(String identifiant, HashSet<Airport> l_airport)
     {
         this.identifiant = identifiant;
         this.listeAirport = l_airport;
     }
-    public String getIdentifiant() {
+
+    //region Accesseurs
+    public String getIdentifiant()
+    {
         return identifiant;
     }
 
+    //endregion
     public Airport findAirport(String nom)
     {
         Airport parcours;
@@ -43,17 +48,38 @@ public class Airline
     {
         Airport origine = findAirport(ori);
         Airport destination = findAirport(dest);
+        Flight vol = null;
 
         if((origine != null) && (destination != null))
-            return new Flight(id, date, this, origine, destination);
-        else
-            return null;
+        {
+            vol = new Flight(id, date, this, origine, destination);
+            if(listeVol.contains(vol))
+            {
+                System.err.println("Un vol avec cet ID existe d\u00e9j\u00e0 pour cette compagnie.");
+                vol = null;
+            }
+            else
+            {
+                listeVol.add(vol);
+            }
+        }
+        else if(origine == null)
+        {
+            System.err.println("L'aéroport d'origine n'existe pas.");
+        }
+        else if(destination == null)
+        {
+            System.err.println("L'aéroport de destination n'existe pas.");
+        }
+
+        return vol;
     }
 
     @Override
     public String toString() {
         return "Airline{" +
                 "identifiant='" + identifiant + '\'' +
+                ", listeVol=" + listeVol +
                 '}';
     }
 
