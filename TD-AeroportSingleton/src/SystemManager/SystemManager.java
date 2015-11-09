@@ -20,67 +20,67 @@ public class SystemManager
     //Constructeur
     private SystemManager(){}
 
+
+
     //region Airport
-    private HashSet<Airport> listeaero = new HashSet<>();
-    public HashSet<Airport> getListeaero() {
-        return listeaero;
+    private HashMap<String, Airport> dicoAero = new HashMap<>();
+    public HashMap<String, Airport> getDicoAero()
+    {
+        return dicoAero;
     }
 
     public void createAirport(String code)
     {
-        Airport test = new Airport(code);
+        Airport aero = new Airport(code);
 
         if(code.length() != 3)
             System.err.println("Votre code n'a pas le bon nombre de caractères");
 
-        else if(listeaero.contains(test))
+        else if(dicoAero.containsKey(aero.getName()))
             System.err.println("Ce code existe déjà");
 
         else
-            listeaero.add(new Airport(code));
+        dicoAero.put(aero.getName(), aero);
     }
     // endregion
 
+
+
     //region Airline
-    private HashSet<Airline> listeairl = new HashSet<>();
-    public HashSet<Airline> getListeairl()
+    private HashMap<String, Airline> dicoAir = new HashMap<>();
+    public HashMap<String, Airline> getDicoAir()
     {
-        return listeairl;
+        return dicoAir;
     }
+
     public void createAirline(String nom)
     {
-        Airline test = new Airline(nom, listeaero);
+        Airline ligne = new Airline(nom, dicoAero);
 
         if(nom.length() > 5)
             System.err.println("Votre code a trop de caract\u00e8res");
 
-        else if(listeairl.contains(test))
+        else if(dicoAir.containsKey(ligne.getIdentifiant()))
             System.err.println("Ce code existe déjà.");
 
         else
-            listeairl.add(new Airline(nom, listeaero));
+            dicoAir.put(ligne.getIdentifiant(), ligne);
     }
     //endregion
 
-    //region Flight
-    private Airline trouverAirline(String n)
-    {
-        Iterator it = listeairl.iterator();
-        Airline parcours;
-        while(it.hasNext())
-        {
-            parcours = (Airline) it.next();
-            if(parcours.getIdentifiant().equals(n))
-            {
-                return parcours;
-            }
-        }
 
-        return null;
+
+    //region Flight
+    private HashMap<String, Flight> dicoVol = new HashMap<>();
+    public HashMap<String, Flight> getDicVol()
+    {
+        return dicoVol;
     }
+
+    
     public void createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
     {
-        Airline ligne = trouverAirline(n);
+        Airline ligne = dicoAir.get(n);
         if(ligne == null)
         {
             System.err.println("Cette compagnie a\u00e9rienne n'existe pas");
@@ -89,6 +89,8 @@ public class SystemManager
         {
             Calendar date = new GregorianCalendar(year, month, day);
             Flight vol = ligne.createFlight(orig, dest, date, id);
+            if(vol != null)
+                dicoVol.put(vol.getID(), vol);
         }
 
     }
@@ -97,7 +99,7 @@ public class SystemManager
     //region Section
     public void createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s)
     {
-        Airline ligne = trouverAirline(air);
+        Airline ligne = dicoAir.get(air);
         if(ligne != null)
             ligne.createSection(flID, rows, cols, s);
         else
@@ -123,32 +125,38 @@ public class SystemManager
         //region affiche aéroports
         System.out.println("Liste des aéroports :");
         System.out.println("----------------------------------");
-        Iterator it_aero = listeaero.iterator();
+        Set<String> listeClef = dicoAero.keySet();
+        Iterator it_aero = listeClef.iterator();
         while(it_aero.hasNext())
         {
-            System.out.println(((Airport)it_aero.next()).toString());
+            Object aero = it_aero.next();
+            System.out.println(dicoAero.get(aero));
         }
         System.out.println("----------------------------------");
         //endregion
 
         //region affiche airline
-        Iterator it_air = listeairl.iterator();
-        Iterator it_compagnie;
-        Airline compagnie;
-        Flight vol;
+        System.out.println("Liste des compagnies a\u00e9riennes :");
+        System.out.println("----------------------------------");
+        Set<String> clef = dicoAir.keySet();
+        Iterator it_air = clef.iterator();
         while(it_air.hasNext())
         {
-            compagnie = (Airline)it_air.next();
-            System.out.println("Pour la compagnie" + compagnie.getIdentifiant());
-            it_compagnie = compagnie.getListeVol().iterator();
-            while(it_compagnie.hasNext())
-            {
-                vol = (Flight) it_compagnie.next();
-                System.out.println(vol.toString());
-            }
-            System.out.println("---------------------------------");
+            Object ligne = it_air.next();
+            System.out.println(dicoAir.get(ligne));
         }
         //endregion
 
+        //region affiche vol
+        System.out.println("Liste des vols :");
+        System.out.println("----------------------------------");
+        Set<String> setClef = dicoVol.keySet();
+        Iterator it_vol = setClef.iterator();
+        while(it_vol.hasNext())
+        {
+            Object vol = it_vol.next();
+            System.out.println(dicoVol.get(vol));
+        }
+        //endregion
     }
 }

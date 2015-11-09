@@ -134,19 +134,21 @@ public class Flight
 
     private String afficheDate()
     {
-        return ""+date.DAY_OF_MONTH+"/"+date.MONTH+"/"+date.YEAR;
+        return ""+date.get(Calendar.DAY_OF_MONTH)+"/"+date.get(Calendar.MONTH)+"/"+date.get(Calendar.YEAR);
     }
+
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "Flight{" +
                 "ID='" + ID + '\'' +
                 ", date=" + afficheDate() +
-                ", al=" + al +
-                ", origine=" + origine +
-                ", destination=" + destination +
+                ", airline=" + al.getIdentifiant() +
+                ", origine=" + origine.getName() +
+                ", destination=" + destination.getName() +
+                ", section=" + l_section.toString() +
                 '}';
     }
+
     /*
     +
     +?ndSection(): FlightSection

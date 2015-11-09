@@ -29,10 +29,12 @@ public class Main {
         sm.createFlight("DELTA","DEN","DEH",2009,8,9,"567");
         //endregion
 
-        sm.displaySystemDetails();
-/*
+       sm.displaySystemDetails();
+
         //region données création section
+
         sm.createSection("JET" , "123" , 2 , 2 , SeatClass.ECO);
+        /*
         sm.createSection("JET" , "123" , 1 , 3 , SeatClass.ECO);
         sm.createSection("JET" , "123" , 2 , 3 , SeatClass.FIRST);
         sm.createSection("DELTA" , "123" , 1 , 1 , SeatClass.BUSI);

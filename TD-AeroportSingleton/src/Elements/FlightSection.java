@@ -1,7 +1,9 @@
 package Elements;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Created by Alice on 02/11/2015.
@@ -18,6 +20,7 @@ public class FlightSection
     private int ligne;
     private int colonne;
     private HashSet<Seat> l_siege;
+    private HashMap<SeatID, Seat> dicoSiege;
 
     // Constructeur
     public FlightSection(SeatClass section, int ligne, int colonne) {
@@ -25,6 +28,7 @@ public class FlightSection
         this.ligne = ligne;
         this.colonne = colonne;
         this.l_siege = new HashSet<>();
+        this.dicoSiege = new HashMap<>();
 
         for(int i=0; i<ligne; i++)
         {
@@ -34,7 +38,7 @@ public class FlightSection
                 SeatID st = new SeatID(i, c);
                 c++;
                 Seat s = new Seat(st);
-                l_siege.add(s);
+                dicoSiege.put(s.getSeatNum(), s);
             }
         }
     }
@@ -53,11 +57,12 @@ public class FlightSection
 
     public Boolean hasAvailableSeat()
     {
-        Iterator it = l_siege.iterator();
+        Set<SeatID> clef = dicoSiege.keySet();
+        Iterator it = clef.iterator();
         while(it.hasNext())
         {
             // si il existe au moins un siège libre (isBooked = false), on retourne true = il reste des places
-            if(((Seat)it.next()).getStatus()==false)
+            if(dicoSiege.get(it.next()).getStatus()==false)
             {
                 return true;
             }
@@ -68,13 +73,16 @@ public class FlightSection
     public Boolean bookSeat()
     {
         boolean res = false;
+
         if(hasAvailableSeat())
         {
-            Iterator it = l_siege.iterator();
-            while(it.hasNext() && res == false)
+            Set<SeatID> clef = dicoSiege.keySet();
+            Iterator it = clef.iterator();
+            // tant qu'aucun siège n'a été reservé
+            while(res == false && it.hasNext())
             {
-                Seat s = (Seat)it.next();
-                // si il existe au moins un siège libre (isBooked = false), on retourne true = il reste des places
+                Seat s = dicoSiege.get(it.next());
+                // si le siège est libre (isBooked = false), on le booked
                 if(s.getStatus()==false)
                 {
                     s.booked();
@@ -90,28 +98,30 @@ public class FlightSection
 
     public Boolean bookSeat(SeatID sid)
     {
-        Boolean res = false;
-        Iterator it = l_siege.iterator();
-        while(it.hasNext())
-        {
-            Seat s = (Seat)it.next();
-            // si il existe au moins un siège libre (isBooked = false), on retourne true = il reste des places
-            if(s.getSeatNum() == sid)
-            {
-                if(s.getStatus()==false)
-                {
-                    s.booked();
-                    res = true;
-                }
-                else
-                    System.err.println("Ce siège n'est pas disponible.");
-            }
-            else
-                System.err.println("Ce siège n'existe pas.");
 
+        boolean res = false;
+        Seat siege = dicoSiege.get(sid);
+
+        if(siege.getStatus() == false)
+        {
+            siege.booked();
+            res = true;
         }
+        else
+            System.err.println("Ce siège est déjà réservé.");
+
+
 
         return res;
+    }
+
+    @Override
+    public String toString() {
+        return "FlightSection{" +
+                "section=" + section +
+                ", ligne=" + ligne +
+                ", colonne=" + colonne +
+                '}';
     }
 
 
