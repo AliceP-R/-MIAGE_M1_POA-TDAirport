@@ -10,10 +10,6 @@ public enum SeatClass
     ECO("Economic");
 
     private final String nom;
-    public String getNom()
-    {
-        return nom;
-    }
 
     SeatClass(String nom)
     {

@@ -10,17 +10,10 @@ public class Airline
 
 
     private String identifiant;
-
-
-
     private HashMap<String, Flight> dicoVol = new HashMap<>();
     private HashMap<String, Airport> dicoAir = new HashMap<>();
     public HashMap<String, Flight> getDicoVol() {
         return dicoVol;
-    }
-
-    public HashMap<String, Airport> getDicoAir() {
-        return dicoAir;
     }
 
     // Constructeur
@@ -74,6 +67,8 @@ public class Airline
         Flight vol = dicoVol.get(flID);
         if(vol == null)
             System.err.println("Ce vol n'existe pas.");
+        else if(vol.getDicoSec().containsKey(id))
+            System.err.println("Cet id existe d\u00e9j\u00e0.");
         else
             vol.createSection(rows, cols, s, id);
     }

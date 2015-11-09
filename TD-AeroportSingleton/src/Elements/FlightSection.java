@@ -109,29 +109,41 @@ public class FlightSection
         boolean res = false;
         Seat siege = dicoSiege.get(sid);
 
-        if(siege != null && siege.getStatus() == false)
+        if(siege != null)
         {
-            siege.booked();
-            res = true;
+            if(siege.getStatus() == false)
+            {
+                siege.booked();
+                res = true;
+            }
+            else
+                System.err.println("Le si\u00e8ge "+sid+" est d\u00e9j\u00e0 r\u00e9serv\u00e9.");
         }
-        else if(siege != null)
-            System.err.println("Ce siège est déjà réservé.");
         else
-            System.err.println("Ce siège n'existe pas.");
-
-
-
+            System.err.println("Ce si\u00e8ge n'existe pas.");
         return res;
+    }
+
+    private String afficheSiege()
+    {
+        String affichage= "Liste si\u00e8ge : ";
+        Set<SeatID> clef = dicoSiege.keySet();
+        Iterator<SeatID> it = clef.iterator();
+        while(it.hasNext())
+        {
+            SeatID sid = it.next();
+            affichage+="\n {"+dicoSiege.get(sid).toString()+"}";
+        }
+
+        return affichage;
     }
 
     @Override
     public String toString() {
-        return "FlightSection{" +
+        return "{" +
                 "identifiant='" + identifiant + '\'' +
                 ", section=" + section +
-                ", ligne=" + ligne +
-                ", colonne=" + colonne +
-                ", dicoSiege=" + dicoSiege +
+                "," + afficheSiege() +
                 '}';
     }
 }

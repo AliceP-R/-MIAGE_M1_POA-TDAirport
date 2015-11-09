@@ -44,6 +44,11 @@ public class Flight
     public Airport getOrigine() {
         return origine;
     }
+
+    public HashMap<String, FlightSection> getDicoSec() {
+        return dicoSec;
+    }
+
     //endregion
 
     // renvoie true si il y a au moins une section tarifaire
@@ -80,38 +85,23 @@ public class Flight
     public boolean createSection(int rows, int cols, SeatClass s, String id)
     {
         boolean res=true;
-        if(rows > 100 && rows < 0)
+        if(rows > 100 || rows < 0)
         {
             res=false;
-            System.err.println("Nombre de rangée incorrect.");
+            System.err.println("Nombre de rang\u00e9e incorrect.");
         }
-        else if(cols > 10 && cols < 0)
+        if(cols > 10 || cols < 0)
         {
             res = false;
-            System.err.println("Nombre de sièges par rangée incorrect.");
+            System.err.println("Nombre de si\u00e8ges par rang\u00e9e incorrect.");
         }
         else
+        if(res == true)
         {
             FlightSection ajout = new FlightSection(id, s, rows, cols);
             dicoSec.put(ajout.getIdentifiant(), ajout);
         }
 
-        return res;
-    }
-
-
-    // id de la section
-    public boolean bookSeat(String id)
-    {
-        boolean res=false;
-        if(this.hasSeats())
-        {
-            FlightSection fs = dicoSec.get(id);
-            if(fs != null)
-            {
-                res=fs.bookSeat();
-            }
-        }
         return res;
     }
 
@@ -138,14 +128,29 @@ public class Flight
         return ""+date.get(Calendar.DAY_OF_MONTH)+"/"+date.get(Calendar.MONTH)+"/"+date.get(Calendar.YEAR);
     }
 
+    private String afficheSection()
+    {
+        String affichage = "";
+        Set<String> clef = dicoSec.keySet();
+        Iterator<String> it = clef.iterator();
+        while(it.hasNext())
+        {
+            Object sec = it.next();
+            affichage += dicoSec.get(sec).toString()+"\n";
+        }
+
+
+        return affichage;
+    }
+
     @Override
     public String toString() {
-        return "Détails du vol " + ID + " { \n" +
+        return "D\u00e9tails du vol " + ID + " { \n" +
                 " date=" + afficheDate() +
                 ", airline=" + al.getIdentifiant() +
                 ", origine=" + origine.getName() +
                 ", destination=" + destination.getName() +
-                ", \nsection=" + dicoSec.toString() +
+                ", \nsection=\n" + afficheSection() +
                 "\n}";
     }
 

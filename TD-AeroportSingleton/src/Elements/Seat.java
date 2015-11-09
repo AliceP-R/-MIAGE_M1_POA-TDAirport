@@ -32,6 +32,11 @@ public class Seat
 
     @Override
     public String toString() {
-        return "" + seatNum + ", r\u00e9serv\u00e9=" + isBooked;
+        String resa;
+        if(this.isBooked)
+            resa = "r\u00e9serv\u00e9";
+        else
+            resa = "libre";
+        return "" + seatNum + ", "+resa;
     }
 }

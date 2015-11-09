@@ -24,8 +24,7 @@ public class SystemManager
 
     //region Airport
     private HashMap<String, Airport> dicoAero = new HashMap<>();
-    public HashMap<String, Airport> getDicoAero()
-    {
+    public HashMap<String, Airport> getDicoAero() {
         return dicoAero;
     }
 
@@ -48,8 +47,7 @@ public class SystemManager
 
     //region Airline
     private HashMap<String, Airline> dicoAir = new HashMap<>();
-    public HashMap<String, Airline> getDicoAir()
-    {
+    public HashMap<String, Airline> getDicoAir() {
         return dicoAir;
     }
 
@@ -72,8 +70,7 @@ public class SystemManager
 
     //region Flight
     private HashMap<String, Flight> dicoVol = new HashMap<>();
-    public HashMap<String, Flight> getDicVol()
-    {
+    public HashMap<String, Flight> getDicoVol() {
         return dicoVol;
     }
 
@@ -108,8 +105,7 @@ public class SystemManager
     //endregion
 
 
-    //region Section
-    private HashSet<Flight> findAvailableFlights(String orig, String dest)
+    public void findAvailableFlights(String orig, String dest)
     {
         Airport origine = dicoAero.get(orig);
         Airport destination = dicoAero.get(dest);
@@ -124,37 +120,53 @@ public class SystemManager
                 res.add(f);
         }
 
-        return res;
+        if(res.size() == 1)
+            System.out.println("Il y a 1 vol incomplet en partance de " + orig + " pour " + dest +" :");
+        else if(res.size() > 1)
+            System.out.println("Il y a "+res.size()+" vols incomplets en partance de " + orig + " pour " + dest +" :");
+        if(!res.isEmpty())
+            System.out.println(res.toString());
+        else
+            System.out.println("Il n'y a aucun vol incomplet en partance de " + orig + " pour " + dest +".");
     }
 
     public void bookSeat(String air, String fl, SeatClass sc, int row, char col)
     {
         Airline compagnie = dicoAir.get(air);
-        Flight vol = compagnie.getDicoVol().get(fl);
+        Flight vol = null;
         HashSet<FlightSection> fls;
 
         SeatID sid = new SeatID(row, col);
 
         if(compagnie == null)
         {
-            System.err.println("Cette compagnie aérienne n'existe pas.");
-        }
-        else if(vol == null)
-        {
-            System.err.println("Pas de " +sc+" pour ce vol.");
+            System.err.println("La compagnie a\u00e9rienne "+air+" n'existe pas.");
         }
         else
+            vol = compagnie.getDicoVol().get(fl);
+
+        if(compagnie != null && vol == null)
+        {
+            System.err.println("Le vol "+fl+" pour la compagnie "+air+" n'existe pas.");
+        }
+        else if(compagnie != null && vol != null)
         {
             fls = vol.findSection(sc);
             boolean resa = false;
+
+            if(fls.isEmpty()) {
+                System.err.println("Il n'y a pas de place dans une section " + sc +" pour ce vol.");
+                resa = true;
+            }
             Iterator<FlightSection> it = fls.iterator();
             while(resa == false && it.hasNext())
             {
-                resa = ((FlightSection)it.next()).bookSeat(sid);
+                FlightSection fs = it.next();
+                if(fs.hasAvailableSeat())
+                    resa = fs.bookSeat(sid);
+                else
+                    System.err.println("Section compl\u00e8te");
             }
-
-            if(resa == false)
-                System.err.println("Le si\u00e8ge " +sid+" n'existe pas pour la section "+sc+" du vol "+fl+" de la compagnie "+air);
         }
     }
 
@@ -162,7 +174,7 @@ public class SystemManager
     {
 
         //region affiche aéroports
-        System.out.println("Liste des aéroports :");
+        System.out.println("Liste des a\u00e9roports :");
         System.out.println("----------------------------------");
         Set<String> listeClef = dicoAero.keySet();
         Iterator it_aero = listeClef.iterator();
@@ -184,9 +196,11 @@ public class SystemManager
             Object ligne = it_air.next();
             System.out.println(dicoAir.get(ligne));
         }
+        System.out.println("----------------------------------");
         //endregion
 
         //region affiche vol
+
         System.out.println("Liste des vols :");
         System.out.println("----------------------------------");
         Set<String> setClef = dicoVol.keySet();
@@ -196,6 +210,7 @@ public class SystemManager
             Object vol = it_vol.next();
             System.out.println(dicoVol.get(vol));
         }
+        System.out.println("----------------------------------");
         //endregion
     }
 }
