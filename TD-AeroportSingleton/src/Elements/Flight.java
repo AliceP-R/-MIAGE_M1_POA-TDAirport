@@ -1,8 +1,6 @@
 package Elements;
 
-import java.util.Calendar;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.util.*;
 
 /**
  * Created by Alice on 02/11/2015.
@@ -14,15 +12,16 @@ public class Flight
     private Airline al;
     private Airport origine;
     private Airport destination;
-    private HashSet<FlightSection> l_section;
+    private HashMap<String, FlightSection> dicoSec;
 
-    public Flight(String ID, Calendar date, Airline al, Airport origine, Airport destination) {
+    public Flight(String ID, Calendar date, Airline al, Airport origine, Airport destination)
+    {
         this.ID = ID;
         this.date = date;
         this.al = al;
         this.origine = origine;
         this.destination = destination;
-        this.l_section = new HashSet<>();
+        this.dicoSec = new HashMap<>();
     }
 
     //region Accesseurs
@@ -50,7 +49,7 @@ public class Flight
     // renvoie true si il y a au moins une section tarifaire
     public boolean hasSection()
     {
-        if(l_section.isEmpty())
+        if(dicoSec.isEmpty())
             return  false;
 
         return true;
@@ -62,21 +61,23 @@ public class Flight
         boolean res=false;
         if(hasSection())
         {
-            Iterator it = l_section.iterator();
-            while (it.hasNext())
+            Set<String> clef = dicoSec.keySet();
+            Iterator ite = clef.iterator();
+            while(ite.hasNext())
             {
-                FlightSection fs = (FlightSection)it.next();
-                if(fs.hasAvailableSeat())
-                {
-                    res=true;
-                }
+                Object sec = ite.next();
+                if(dicoSec.get(sec).hasAvailableSeat())
+                    res= true;
             }
         }
+        else
+            System.err.println("Il n'y a pas de section d\u00e9finie pour ce vol.");
+
         return res;
     }
 
     // si le nombre de rangé et le nombre de siège par ranger est correct, créé une nouvelle section tarifaire pour ce vol
-    public boolean createSection(int rows, int cols, SeatClass s)
+    public boolean createSection(int rows, int cols, SeatClass s, String id)
     {
         boolean res=true;
         if(rows > 100 && rows < 0)
@@ -91,26 +92,26 @@ public class Flight
         }
         else
         {
-            l_section.add(new FlightSection(s, rows, cols));
+            FlightSection ajout = new FlightSection(id, s, rows, cols);
+            dicoSec.put(ajout.getIdentifiant(), ajout);
         }
 
         return res;
     }
 
 
-    public boolean bookSeat()
+    // id de la section
+    public boolean bookSeat(String id)
     {
         boolean res=false;
-        if(this.hasSeats() && res==false)
+        if(this.hasSeats())
         {
-            Iterator it_fs = l_section.iterator();
-            while(it_fs.hasNext())
+            FlightSection fs = dicoSec.get(id);
+            if(fs != null)
             {
-                FlightSection etude = (FlightSection) it_fs.next();
-                res = etude.bookSeat();
+                res=fs.bookSeat();
             }
         }
-
         return res;
     }
 
@@ -139,19 +140,29 @@ public class Flight
 
     @Override
     public String toString() {
-        return "Flight{" +
-                "ID='" + ID + '\'' +
-                ", date=" + afficheDate() +
+        return "Détails du vol " + ID + " { \n" +
+                " date=" + afficheDate() +
                 ", airline=" + al.getIdentifiant() +
                 ", origine=" + origine.getName() +
                 ", destination=" + destination.getName() +
-                ", section=" + l_section.toString() +
-                '}';
+                ", \nsection=" + dicoSec.toString() +
+                "\n}";
     }
 
-    /*
-    +
-    +?ndSection(): FlightSection
-    */
+    // Renvoie la premiere section avec des sièges libres correspondantes
+    public HashSet<FlightSection> findSection(SeatClass sc)
+    {
+        HashSet<FlightSection> retour = new HashSet<>();
+        Set clef = dicoSec.keySet();
+        Iterator it = clef.iterator();
+        while(it.hasNext())
+        {
+            Object fs = it.next();
+            FlightSection tmp = dicoSec.get(fs);
+            if(tmp.getSection() == sc && tmp.hasAvailableSeat())
+                retour.add(tmp);
+        }
 
+        return retour;
+    }
 }

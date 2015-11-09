@@ -77,7 +77,7 @@ public class SystemManager
         return dicoVol;
     }
 
-    
+    // n = compagnie
     public void createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
     {
         Airline ligne = dicoAir.get(n);
@@ -97,11 +97,11 @@ public class SystemManager
     //endregion
 
     //region Section
-    public void createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s)
+    public void createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s, String id)
     {
         Airline ligne = dicoAir.get(air);
         if(ligne != null)
-            ligne.createSection(flID, rows, cols, s);
+            ligne.createSection(flID, rows, cols, s, id);
         else
             System.err.println("Cette compagnie n'existe pas.");
     }
@@ -109,14 +109,53 @@ public class SystemManager
 
 
     //region Section
-    private void finndAvailableFlights()
+    private HashSet<Flight> findAvailableFlights(String orig, String dest)
     {
+        Airport origine = dicoAero.get(orig);
+        Airport destination = dicoAero.get(dest);
+        HashSet<Flight> res = new HashSet();
 
+        Set clef = dicoVol.keySet();
+        Iterator it = clef.iterator();
+        while(it.hasNext())
+        {
+            Flight f = dicoVol.get(it.next());
+            if(f.getDestination().equals(destination) && f.getOrigine().equals(origine) && f.hasSeats())
+                res.add(f);
+        }
+
+        return res;
     }
 
-    private void bookSeat()
+    public void bookSeat(String air, String fl, SeatClass sc, int row, char col)
     {
+        Airline compagnie = dicoAir.get(air);
+        Flight vol = compagnie.getDicoVol().get(fl);
+        HashSet<FlightSection> fls;
 
+        SeatID sid = new SeatID(row, col);
+
+        if(compagnie == null)
+        {
+            System.err.println("Cette compagnie aérienne n'existe pas.");
+        }
+        else if(vol == null)
+        {
+            System.err.println("Pas de " +sc+" pour ce vol.");
+        }
+        else
+        {
+            fls = vol.findSection(sc);
+            boolean resa = false;
+            Iterator<FlightSection> it = fls.iterator();
+            while(resa == false && it.hasNext())
+            {
+                resa = ((FlightSection)it.next()).bookSeat(sid);
+            }
+
+            if(resa == false)
+                System.err.println("Le si\u00e8ge " +sid+" n'existe pas pour la section "+sc+" du vol "+fl+" de la compagnie "+air);
+        }
     }
 
     public void displaySystemDetails()

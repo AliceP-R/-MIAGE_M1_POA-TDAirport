@@ -69,13 +69,13 @@ public class Airline
         return vol;
     }
 
-    public void createSection(String  flID, int rows,  int cols,  SeatClass  s)
+    public void createSection(String  flID, int rows,  int cols,  SeatClass  s, String id)
     {
         Flight vol = dicoVol.get(flID);
         if(vol == null)
             System.err.println("Ce vol n'existe pas.");
         else
-            vol.createSection(rows, cols, s);
+            vol.createSection(rows, cols, s, id);
     }
 
     @Override

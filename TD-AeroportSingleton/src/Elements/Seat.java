@@ -32,9 +32,6 @@ public class Seat
 
     @Override
     public String toString() {
-        return "Seat{" +
-                "seatNum=" + seatNum +
-                ", isBooked=" + isBooked +
-                '}';
+        return "" + seatNum + ", r\u00e9serv\u00e9=" + isBooked;
     }
 }

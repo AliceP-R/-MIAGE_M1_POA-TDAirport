@@ -1,5 +1,7 @@
 package Elements;
 
+import SystemManager.SystemManager;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -16,18 +18,24 @@ import java.util.Set;
 
 public class FlightSection
 {
+    private String identifiant;
     private SeatClass section;
     private int ligne;
     private int colonne;
-    private HashSet<Seat> l_siege;
     private HashMap<SeatID, Seat> dicoSiege;
 
+
+    public String getIdentifiant()
+    {
+        return identifiant;
+    }
+
     // Constructeur
-    public FlightSection(SeatClass section, int ligne, int colonne) {
+    public FlightSection(String id, SeatClass section, int ligne, int colonne) {
+        this.identifiant = id;
         this.section = section;
         this.ligne = ligne;
         this.colonne = colonne;
-        this.l_siege = new HashSet<>();
         this.dicoSiege = new HashMap<>();
 
         for(int i=0; i<ligne; i++)
@@ -98,17 +106,18 @@ public class FlightSection
 
     public Boolean bookSeat(SeatID sid)
     {
-
         boolean res = false;
         Seat siege = dicoSiege.get(sid);
 
-        if(siege.getStatus() == false)
+        if(siege != null && siege.getStatus() == false)
         {
             siege.booked();
             res = true;
         }
-        else
+        else if(siege != null)
             System.err.println("Ce siège est déjà réservé.");
+        else
+            System.err.println("Ce siège n'existe pas.");
 
 
 
@@ -118,12 +127,11 @@ public class FlightSection
     @Override
     public String toString() {
         return "FlightSection{" +
-                "section=" + section +
+                "identifiant='" + identifiant + '\'' +
+                ", section=" + section +
                 ", ligne=" + ligne +
                 ", colonne=" + colonne +
+                ", dicoSiege=" + dicoSiege +
                 '}';
     }
-
-
-
 }
