@@ -1,10 +1,11 @@
 import Elements.SeatClass;
+import MesExceptions.doublonException;
+import MesExceptions.lenghtException;
 import SystemManager.SystemManager;
 
 public class Main {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws doublonException, lenghtException {
         SystemManager sm = SystemManager.getInstance();
 
 
@@ -17,6 +18,8 @@ public class Main {
         sm.createAirport("JPNPO"); // Nom trop long
         sm.createAirport("DEH"); // Existe déjà
         sm.createAirport("LEF");
+
+        sm.displaySystemDetails();
 
         //endregion
 

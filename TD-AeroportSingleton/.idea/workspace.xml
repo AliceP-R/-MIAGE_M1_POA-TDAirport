@@ -30,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="67" selection-start-line="34" selection-start-column="8" selection-end-line="41" selection-end-column="67" />
+              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,89 +41,41 @@
       <file leaf-file-name="SystemManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.413793">
-              <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
               <folding>
-                <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-                <element signature="e#527#528#0" expanded="true" />
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-                <element signature="e#1094#1095#0" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1673#1674#0" expanded="true" />
-                <element signature="e#1703#1704#0" expanded="true" />
                 <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SystemManagerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
+      <file leaf-file-name="SMTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Test/SMTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5982405">
-              <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.99706745">
+              <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
               <folding>
-                <element signature="e#412#445#0" expanded="false" />
+                <element signature="n#!!doc;n#createAirportOk#0;n#SMTest#0" expanded="false" />
+                <element signature="method#createAirportOk#0;class#SMTest#0" expanded="false" />
+                <element signature="method#testCreateAirportOk#0;class#SMTest#0" expanded="false" />
+                <element signature="method#createAirportID#0;class#SMTest#0" expanded="false" />
+                <element signature="method#testCreateAirportID#0;class#SMTest#0" expanded="false" />
+                <element signature="method#createAirportLenght#0;class#SMTest#0" expanded="false" />
+                <element signature="method#testCreateAirportLenght#0;class#SMTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SeatClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Elements/SeatClass.java">
+      <file leaf-file-name="lenghtException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MesExceptions/lenghtException.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
               <folding>
-                <element signature="e#211#212#0" expanded="true" />
-                <element signature="e#241#242#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlightSection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Elements/FlightSection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
-              <folding>
-                <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
-                <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
-                <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Flight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Elements/Flight.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
-              <folding>
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-                <element signature="e#2827#2828#0" expanded="true" />
-                <element signature="e#2863#2864#0" expanded="true" />
-                <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Airline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Elements/Airline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
-              <folding>
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="method#toString#0;class#Airline#0" expanded="false" />
-                <element signature="method#equals#0;class#Airline#0" expanded="false" />
+                <element signature="e#154#155#0" expanded="true" />
+                <element signature="e#226#227#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,9 +87,55 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding>
-                <element signature="e#147#148#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
                 <element signature="e#241#242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeatClass.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Elements/SeatClass.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlightSection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Elements/FlightSection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#733#734#0" expanded="false" />
+                <element signature="e#767#768#0" expanded="false" />
+                <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+                <element signature="e#1411#1412#0" expanded="false" />
+                <element signature="e#1441#1442#0" expanded="false" />
+                <element signature="e#1494#1495#0" expanded="false" />
+                <element signature="e#1532#1533#0" expanded="false" />
+                <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
+                <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Airline.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Elements/Airline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+              <folding>
+                <element signature="e#593#594#0" expanded="false" />
+                <element signature="e#627#628#0" expanded="false" />
+                <element signature="method#toString#0;class#Airline#0" expanded="false" />
+                <element signature="method#equals#0;class#Airline#0" expanded="false" />
+                <element signature="e#2431#2432#0" expanded="false" />
+                <element signature="e#2476#2477#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -149,10 +147,8 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
               <folding>
-                <element signature="e#285#286#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#416#417#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="false" />
+                <element signature="e#384#385#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -165,8 +161,8 @@
       <list>
         <option value="Singleton" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="TestNG Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -189,9 +185,13 @@
         <option value="$PROJECT_DIR$/src/Elements/Flight.java" />
         <option value="$PROJECT_DIR$/src/Elements/FlightSection.java" />
         <option value="$PROJECT_DIR$/src/Elements/Seat.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Test/SystemManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/SystemManager/SMTest.java" />
+        <option value="$PROJECT_DIR$/src/MesExceptions/doublonException.java" />
+        <option value="$PROJECT_DIR$/src/MesExceptions/lenghtException.java" />
         <option value="$PROJECT_DIR$/src/SystemManager/SystemManager.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Test/SMTest.java" />
       </list>
     </option>
   </component>
@@ -237,7 +237,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -321,12 +320,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Elements" />
+              <option name="myItemId" value="MesExceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -335,7 +335,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TD-Pierre-Feuille-Ciseau" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -351,12 +351,49 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alice\Documents\M1\POO\ReformulationDevoir\TD-AeroportSingleton\Test" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Test" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="SystemManager" />
       <recent name="Test" />
       <recent name="Tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SystemManagerTest">
+  <component name="RunManager" selected="TestNG.SMTest">
+    <configuration default="false" name="SMTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="SystemManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TD-AeroportSingleton" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="SystemManager" />
+      <option name="MAIN_CLASS_NAME" value="Test.SMTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -635,10 +672,16 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
       <item index="1" class="java.lang.String" itemvalue="TestNG.SystemManagerTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.SMTest" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.SMTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -660,12 +703,15 @@
       <workItem from="1446729544807" duration="48000" />
       <workItem from="1446796540530" duration="3304000" />
       <workItem from="1446803878099" duration="187000" />
-      <workItem from="1447055514383" duration="25529000" />
+      <workItem from="1447055514383" duration="25799000" />
+      <workItem from="1447142416679" duration="1340000" />
+      <workItem from="1447143939539" duration="2659000" />
+      <workItem from="1447322413284" duration="2459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60862000" />
+    <option name="totallyTimeSpent" value="67590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
@@ -680,12 +726,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38190955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21898928" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25038284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -694,8 +738,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21898928" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -725,42 +771,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Elements/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Elements/Flight.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
-            <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Elements/Seat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -770,16 +787,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#412#445#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,14 +805,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
           <folding>
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
             <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
           </folding>
         </state>
@@ -816,7 +815,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
             <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
             <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
             <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
           </folding>
@@ -828,10 +834,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
             <element signature="method#toString#0;class#Airline#0" expanded="false" />
             <element signature="method#equals#0;class#Airline#0" expanded="false" />
+            <element signature="e#2431#2432#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -841,11 +849,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
             <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
           </folding>
         </state>
@@ -856,10 +870,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -869,16 +881,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#412#445#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,14 +899,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="44" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
           <folding>
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
             <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
           </folding>
         </state>
@@ -915,7 +909,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
             <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
             <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
             <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
           </folding>
@@ -927,10 +928,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
             <element signature="method#toString#0;class#Airline#0" expanded="false" />
             <element signature="method#equals#0;class#Airline#0" expanded="false" />
+            <element signature="e#2431#2432#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -940,11 +943,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
             <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
           </folding>
         </state>
@@ -955,10 +964,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -968,16 +975,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#412#445#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,14 +993,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
             <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
           </folding>
         </state>
@@ -1014,7 +1003,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
             <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
             <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
             <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
           </folding>
@@ -1026,10 +1022,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
             <element signature="method#toString#0;class#Airline#0" expanded="false" />
             <element signature="method#equals#0;class#Airline#0" expanded="false" />
+            <element signature="e#2431#2432#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1039,11 +1037,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
             <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
           </folding>
         </state>
@@ -1054,10 +1058,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1067,16 +1069,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#412#445#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,14 +1087,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
             <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
           </folding>
         </state>
@@ -1113,7 +1097,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
             <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
             <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
             <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
           </folding>
@@ -1125,10 +1116,12 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
             <element signature="method#toString#0;class#Airline#0" expanded="false" />
             <element signature="method#equals#0;class#Airline#0" expanded="false" />
+            <element signature="e#2431#2432#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1138,11 +1131,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
             <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
           </folding>
         </state>
@@ -1153,10 +1152,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1166,16 +1163,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="e#412#445#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,7 +1210,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="0.8162291169451074" x="-77.96491228070175" y="244.03508771929825" />
+          <settings layout="Hierarchic Group" zoom="0.8162291169451074" x="-78.0" y="244.0" />
           <SelectedNodes>
             <node>Elements</node>
           </SelectedNodes>
@@ -1249,7 +1236,7 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="68.5" y="132.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="69.0" y="132.0" />
           <SelectedNodes />
           <Categories />
           <SCOPE>All</SCOPE>
@@ -1270,11 +1257,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="157" column="34" selection-start-line="157" selection-start-column="34" selection-end-line="157" selection-end-column="34" />
           <folding>
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#911#912#0" expanded="false" />
             <element signature="method#hasSection#0;class#Flight#0" expanded="false" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2863#2864#0" expanded="true" />
             <element signature="method#afficheDate#0;class#Flight#0" expanded="false" />
           </folding>
         </state>
@@ -1285,19 +1278,16 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#733#734#0" expanded="false" />
+            <element signature="e#767#768#0" expanded="false" />
             <element signature="n#!!doc;n#getSection#0;n#FlightSection#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1494#1495#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
             <element signature="method#hasAvailableSeat#0;class#FlightSection#0" expanded="false" />
             <element signature="method#bookSeat#0;class#FlightSection#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="67" selection-start-line="34" selection-start-column="8" selection-end-line="41" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1306,10 +1296,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,40 +1305,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
           <folding>
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.413793">
-          <caret line="71" column="62" selection-start-line="71" selection-start-column="62" selection-end-line="71" selection-end-column="62" />
-          <folding>
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1124#1125#0" expanded="true" />
-            <element signature="e#1673#1674#0" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Elements/Airport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="false" />
+            <element signature="e#384#385#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1361,20 +1316,80 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="false" />
+            <element signature="e#627#628#0" expanded="false" />
             <element signature="method#toString#0;class#Airline#0" expanded="false" />
             <element signature="method#equals#0;class#Airline#0" expanded="false" />
+            <element signature="e#2431#2432#0" expanded="false" />
+            <element signature="e#2476#2477#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/SystemManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/Elements/Airport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5982405">
-          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
-            <element signature="e#412#445#0" expanded="false" />
+            <element signature="e#241#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MesExceptions/doublonException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.398827">
+          <caret line="8" column="5" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MesExceptions/lenghtException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="42" selection-start-line="37" selection-start-column="42" selection-end-line="37" selection-end-column="42" />
+          <folding>
+            <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/SMTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.99706745">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!doc;n#createAirportOk#0;n#SMTest#0" expanded="false" />
+            <element signature="method#createAirportOk#0;class#SMTest#0" expanded="false" />
+            <element signature="method#testCreateAirportOk#0;class#SMTest#0" expanded="false" />
+            <element signature="method#createAirportID#0;class#SMTest#0" expanded="false" />
+            <element signature="method#testCreateAirportID#0;class#SMTest#0" expanded="false" />
+            <element signature="method#createAirportLenght#0;class#SMTest#0" expanded="false" />
+            <element signature="method#testCreateAirportLenght#0;class#SMTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

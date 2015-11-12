@@ -1,6 +1,8 @@
 package SystemManager;
 
 import Elements.*;
+import MesExceptions.doublonException;
+import MesExceptions.lenghtException;
 
 import java.util.*;
 
@@ -28,18 +30,23 @@ public class SystemManager
         return dicoAero;
     }
 
-    public void createAirport(String code)
-    {
-        Airport aero = new Airport(code);
+    public Airport createAirport(String code) throws doublonException, lenghtException {
+        Airport aero = null;
 
         if(code.length() != 3)
-            System.err.println("Votre code n'a pas le bon nombre de caractères");
-
-        else if(dicoAero.containsKey(aero.getName()))
-            System.err.println("Ce code existe déjà");
-
+        {
+            throw  new lenghtException(3);
+        }
+        else if(dicoAero.containsKey(code))
+        {
+            throw new doublonException();
+        }
         else
-        dicoAero.put(aero.getName(), aero);
+        {
+            aero = new Airport(code);
+            dicoAero.put(aero.getName(), aero);
+        }
+        return aero;
     }
     // endregion
 
