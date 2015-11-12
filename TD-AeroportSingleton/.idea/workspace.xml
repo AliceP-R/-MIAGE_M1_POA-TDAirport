@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SystemManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SystemManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="3.0351906">
               <caret line="191" column="22" selection-start-line="191" selection-start-column="22" selection-end-line="191" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -37,7 +37,6 @@
                 <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
                 <element signature="e#1184#1185#0" expanded="true" />
                 <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
                 <element signature="e#1814#1815#0" expanded="true" />
                 <element signature="e#1844#1845#0" expanded="true" />
                 <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
@@ -49,10 +48,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SMTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test/SMTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.633431">
+            <state vertical-scroll-proportion="0.0">
               <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -715,16 +714,16 @@
       <workItem from="1447055514383" duration="25799000" />
       <workItem from="1447142416679" duration="1340000" />
       <workItem from="1447143939539" duration="2659000" />
-      <workItem from="1447322413284" duration="14151000" />
+      <workItem from="1447322413284" duration="14891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79282000" />
+    <option name="totallyTimeSpent" value="80022000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -734,7 +733,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38190955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38190955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25038284" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -820,7 +819,6 @@
             <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1184#1185#0" expanded="true" />
             <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1814#1815#0" expanded="true" />
             <element signature="e#1844#1845#0" expanded="true" />
             <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
@@ -915,7 +913,6 @@
             <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1184#1185#0" expanded="true" />
             <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1814#1815#0" expanded="true" />
             <element signature="e#1844#1845#0" expanded="true" />
             <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
@@ -1010,7 +1007,6 @@
             <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1184#1185#0" expanded="true" />
             <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1814#1815#0" expanded="true" />
             <element signature="e#1844#1845#0" expanded="true" />
             <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
@@ -1105,7 +1101,6 @@
             <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1184#1185#0" expanded="true" />
             <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
             <element signature="e#1814#1815#0" expanded="true" />
             <element signature="e#1844#1845#0" expanded="true" />
             <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
@@ -1340,30 +1335,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="191" column="22" selection-start-line="191" selection-start-column="22" selection-end-line="191" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
-            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="n#!!doc;n#dicoVol#0;n#SystemManager#0" expanded="false" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
-            <element signature="n#!!doc;n#createSection#0;n#SystemManager#0" expanded="false" />
-            <element signature="method#findAvailableFlights#0;class#SystemManager#0" expanded="false" />
-            <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test/SMTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.633431">
+        <state vertical-scroll-proportion="0.0">
           <caret line="288" column="0" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1381,6 +1355,26 @@
             <element signature="n#!!doc;n#noFindFlights#0;n#SMTest#0" expanded="false" />
             <element signature="e#9339#9359#0" expanded="false" />
             <element signature="n#!!doc;n#bookSeatNonOk#0;n#SMTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SystemManager/SystemManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.0351906">
+          <caret line="191" column="22" selection-start-line="191" selection-start-column="22" selection-end-line="191" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc;n#dicoAero#0;n#SystemManager#0" expanded="false" />
+            <element signature="n#!!doc;n#dicoAir#0;n#SystemManager#0" expanded="false" />
+            <element signature="e#1184#1185#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+            <element signature="e#1844#1845#0" expanded="true" />
+            <element signature="method#createFlight#0;class#SystemManager#0" expanded="false" />
+            <element signature="n#!!doc;n#createSection#0;n#SystemManager#0" expanded="false" />
+            <element signature="method#findAvailableFlights#0;class#SystemManager#0" expanded="false" />
+            <element signature="method#displaySystemDetails#0;class#SystemManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
