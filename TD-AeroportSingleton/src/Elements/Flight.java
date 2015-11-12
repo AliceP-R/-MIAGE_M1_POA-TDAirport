@@ -82,9 +82,8 @@ public class Flight
     }
 
     // si le nombre de rangé et le nombre de siège par ranger est correct, créé une nouvelle section tarifaire pour ce vol
-    public FlightSection createSection(int rows, int cols, SeatClass s, String id)
+    public boolean createSection(int rows, int cols, SeatClass s, String id)
     {
-        FlightSection ajout = null;
         boolean res=true;
         if(rows > 100 || rows < 0)
         {
@@ -96,14 +95,13 @@ public class Flight
             res = false;
             System.err.println("Nombre de si\u00e8ges par rang\u00e9e incorrect.");
         }
-        else
+
         if(res == true)
         {
-            ajout = new FlightSection(id, s, rows, cols);
+            FlightSection ajout = new FlightSection(id, s, rows, cols);
             dicoSec.put(ajout.getIdentifiant(), ajout);
         }
-
-        return ajout;
+        return res;
     }
 
     @Override

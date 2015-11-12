@@ -136,10 +136,11 @@ public class SMTest {
                         {"AMER", "DEH", "JPN", 2008, 11, 12, "123"},
                         {"SWEST", "DFW", "DEN", 2001, 4, 3, "456"},
                         {"AMER", "JPN", "DFW", 2008, 11, 12, "369"},
-                        {"JET", "LEF", "JPN", 2000, 3, 4, "852"}
+                        {"JET", "LEF", "JPN", 2000, 3, 4, "852"},
+                        {"DELTA", "JPN", "DFW", 2010, 8, 11, "258"}
                 };
     }
-    @Test (dependsOnGroups = { "init.*" }, dataProvider = "createFlightOk")
+    @Test (groups = { "suite" }, dependsOnGroups = { "init.*" }, dataProvider = "createFlightOk")
     public void testCreateFlightOk(String ligne, String orig, String dest, int annee, int mois, int jour, String ID) throws Exception
     {
         GregorianCalendar date = new GregorianCalendar(annee, mois, jour);
@@ -199,29 +200,137 @@ public class SMTest {
     //endregion
 
 
-    //region Section
+    //region Test Section
+    //region création Ok
     @DataProvider
     public Object[][] createSectionOk()
     {
         return new Object[][]
                 {
-                        {"AMER", "123", 2, 2, SeatClass.BUSI, "Business1"}
+                        {"AMER", "123", 2, 2, SeatClass.BUSI, "Business1"},
+                        {"AMER", "369", 1, 4, SeatClass.FIRST, "First1"},
+                        {"AMER", "369", 2, 1, SeatClass.FIRST, "First2"},
+                        {"JET", "852", 1, 1, SeatClass.FIRST, "First1"},
+                        {"DELTA", "258", 1,1, SeatClass.FIRST, "FirstDelta1"}
                 };
     }
-    @Test (dependsOnMethods = "testCreateFlightOk", dataProvider = "createSectionOk")
+    @Test (groups = { "suite" }, dependsOnMethods = "testCreateFlightOk", dataProvider = "createSectionOk")
     public void testCreateSectionOk(String compagnie, String volid, int ligne, int colonne, SeatClass sc, String ID) throws Exception
     {
-        assertEquals(sm.createSection(compagnie, volid, ligne, colonne, sc, ID), new FlightSection(ID, sc, ligne, colonne));
+        assertEquals(sm.createSection(compagnie, volid, ligne, colonne, sc, ID), true);
     }
     //endregion
 
-    @Test
-    public void testFindAvailableFlights() throws Exception {
-
+    //region creation non Ok
+    @DataProvider
+    public Object[][] createSectionNonOk()
+    {
+        return new Object[][]
+                {
+                        {"AMER", "369", 2, -5, SeatClass.FIRST, "First4"}, // Nbre colonne incorrect
+                        {"AMER", "123", 4, 1, SeatClass.BUSI, "Business1"}, // Unicité de l'ID
+                        {"AMER", "369", 200, 5, SeatClass.ECO, "Economie1"}, // Nbre de ligne incorrect
+                        {"SWEST", "657", 2, 1, SeatClass.ECO, "Economie"}, // Vol inexistant
+                        {"ZOZO", "123", 2, 2, SeatClass.ECO, "Economie1"} // Compagnie inexistante
+                };
     }
 
-    @Test
-    public void testBookSeat() throws Exception {
-
+    @Test (dependsOnGroups = { "suite.*" }, dataProvider = "createSectionNonOk")
+    public void testCreateSectionNonOk(String compagnie, String volid, int ligne, int colonne, SeatClass sc, String ID) throws Exception
+    {
+        assertEquals(sm.createSection(compagnie, volid, ligne, colonne, sc, ID), false);
     }
+    //endregion
+    //endregion
+
+    //region Test FindAvailableFlights
+    //region il y en a
+    @DataProvider
+    public Object[][] findFlights()
+    {
+        return new Object[][]
+        {
+                {"JPN","DFW"}, // il y a plusieurs vols disponibles
+                {"LEF","JPN"} // il y a 1 seul vol disponbile
+        };
+    }
+
+    // Il y a des vols disponibles
+    @Test (dataProvider = "findFlights", dependsOnGroups = {"suite.*"}, dependsOnMethods = "testCreateFlightOk")
+    public void testFindAvailableFlightsOk(String orig, String dest) throws Exception
+    {
+        assertEquals(sm.findAvailableFlights(orig, dest), true);
+    }
+    //endregion
+
+    //region il n'y en a pas
+    @DataProvider
+    public Object[][] noFindFlights()
+    {
+        return new Object[][]
+                {
+                        {"JPN","DEN"}, // Pas de vol dispo
+                        {"LEF", "ZOZ"}, // Destination inexistante
+                        {"PAF", "LEF"} // Origine inexistante
+                };
+    }
+
+    // Il n'y a pas des vols disponibles
+    @Test (dataProvider = "noFindFlights", dependsOnGroups = {"suite.*"}, dependsOnMethods = "testCreateFlightOk")
+    public void testFindAvailableFlightsNonOk(String orig, String dest) throws Exception
+    {
+        assertEquals(sm.findAvailableFlights(orig, dest), false);
+    }
+    //endregion
+
+    //endregion
+
+
+    //region Test BookSeat
+    //region BookSeat Ok
+    @DataProvider
+    public Object[][] bookSeatOk()
+    {
+        return new Object[][]
+                {
+                        {"DELTA", "258", SeatClass.FIRST, 0, 'A'},
+                        {"AMER", "123",SeatClass.BUSI, 0, 'A'},
+                        {"JET", "852",SeatClass.FIRST, 0, 'A'},
+                        {"AMER", "369",SeatClass.FIRST, 0, 'A'}
+
+                };
+    }
+
+    // Il y a des vols disponibles
+    @Test (dependsOnGroups = {"suite.*", "init.*"}, dependsOnMethods = {"testFindAvailableFlightsOk"}, dataProvider = "bookSeatOk")
+    public void testBookSeatOk(String air, String fl, SeatClass sc, int row, char col) throws Exception
+    {
+        assertEquals(sm.bookSeat(air,fl,sc,row, col), true);
+    }
+
+    //endregion
+
+    //region BookSeat NonOk
+    @DataProvider
+    public Object[][] bookSeatNonOk()
+    {
+        return new Object[][]
+                {
+                        {"TH", "483",SeatClass.FIRST, 0, 'A'}, // Compagnie aérienne inexistante},
+                        {"AMER", "123",SeatClass.BUSI, 0, 'A'}, // Siège déjà réservé
+                        {"AMER", "123",SeatClass.BUSI, 8, 'A'}, // Siège inexistant
+                        {"JET", "852",SeatClass.FIRST, 0, 'A'} // Pas de place disponible
+
+                };
+    }
+
+    // Il y a des vols disponibles
+    @Test (dependsOnGroups = {"suite.*", "init.*"}, dependsOnMethods = {"testFindAvailableFlightsOk", "testBookSeatOk"}, dataProvider = "bookSeatNonOk")
+    public void testBookSeatNonOk(String air, String fl, SeatClass sc, int row, char col) throws Exception
+    {
+        assertEquals(sm.bookSeat(air,fl,sc,row, col), false);
+    }
+
+    //endregion
+    //endregion
 }

@@ -62,20 +62,20 @@ public class Airline
         return vol;
     }
 
-    public FlightSection createSection(String  flID, int rows,  int cols,  SeatClass  s, String id)
+    public boolean createSection(String  flID, int rows,  int cols,  SeatClass  s, String id)
     {
         Flight vol = dicoVol.get(flID);
-        FlightSection fs = null;
+        boolean creation = false;
         if(vol == null)
             System.err.println("Ce vol n'existe pas.");
         else if(vol.getDicoSec().containsKey(id))
             System.err.println("Cet id existe d\u00e9j\u00e0.");
         else
         {
-            fs = vol.createSection(rows, cols, s, id);
+            creation = vol.createSection(rows, cols, s, id);
         }
 
-        return fs;
+        return creation;
     }
 
     @Override

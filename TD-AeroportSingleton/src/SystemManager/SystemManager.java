@@ -47,8 +47,6 @@ public class SystemManager
     }
     // endregion
 
-
-
     //region Airline
     private HashMap<String, Airline> dicoAir = new HashMap<>();
     public HashMap<String, Airline> getDicoAir() {
@@ -74,8 +72,6 @@ public class SystemManager
         return ligne;
     }
     //endregion
-
-
 
     //region Flight
     private HashMap<String, Flight> dicoVol = new HashMap<>();
@@ -105,12 +101,13 @@ public class SystemManager
     //endregion
 
     //region Section
-    public FlightSection createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s, String id)
+    public boolean createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s, String id)
     {
-        FlightSection creation = null;
+        boolean creation = false;
         Airline ligne = dicoAir.get(air);
-        if(ligne != null)
+        if(ligne != null) {
             creation = ligne.createSection(flID, rows, cols, s, id);
+        }
         else
             System.err.println("Cette compagnie n'existe pas.");
 
@@ -118,37 +115,49 @@ public class SystemManager
     }
     //endregion
 
-
-    public void findAvailableFlights(String orig, String dest)
+    public boolean findAvailableFlights(String orig, String dest)
     {
         Airport origine = dicoAero.get(orig);
         Airport destination = dicoAero.get(dest);
         HashSet<Flight> res = new HashSet();
+        boolean retour = false;
 
-        Set clef = dicoVol.keySet();
-        Iterator it = clef.iterator();
-        while(it.hasNext())
-        {
-            Flight f = dicoVol.get(it.next());
-            if(f.getDestination().equals(destination) && f.getOrigine().equals(origine) && f.hasSeats())
-                res.add(f);
+        if(origine != null && destination != null) {
+            Set clef = dicoVol.keySet();
+            Iterator it = clef.iterator();
+            while (it.hasNext()) {
+                Flight f = dicoVol.get(it.next());
+                if (f.getDestination().equals(destination) && f.getOrigine().equals(origine) && f.hasSeats())
+                    res.add(f);
+            }
+
+            if (!res.isEmpty()) {
+
+                if (res.size() == 1)
+                    System.err.println("Il y a 1 vol incomplet en partance de " + orig + " pour " + dest + " :");
+                else if (res.size() > 1)
+                    System.err.println("Il y a " + res.size() + " vols incomplets en partance de " + orig + " pour " + dest + " :");
+
+                System.err.println(res.toString());
+                retour = true;
+            } else
+                System.err.println("Il n'y a aucun vol incomplet en partance de " + orig + " pour " + dest + ".");
         }
+        if(origine == null)
+            System.err.println("L'a\u00e9roport d'origine n'existe pas.");
+        if(destination == null)
+            System.err.println("L'a\u00e9roport de destination n'existe pas.");
 
-        if(res.size() == 1)
-            System.out.println("Il y a 1 vol incomplet en partance de " + orig + " pour " + dest +" :");
-        else if(res.size() > 1)
-            System.out.println("Il y a "+res.size()+" vols incomplets en partance de " + orig + " pour " + dest +" :");
-        if(!res.isEmpty())
-            System.out.println(res.toString());
-        else
-            System.out.println("Il n'y a aucun vol incomplet en partance de " + orig + " pour " + dest +".");
+        return retour;
     }
 
-    public void bookSeat(String air, String fl, SeatClass sc, int row, char col)
+    public boolean bookSeat(String air, String fl, SeatClass sc, int row, char col)
     {
         Airline compagnie = dicoAir.get(air);
         Flight vol = null;
         HashSet<FlightSection> fls;
+        boolean resa = false;
+        boolean reussi = false;
 
         SeatID sid = new SeatID(row, col);
 
@@ -166,7 +175,7 @@ public class SystemManager
         else if(compagnie != null && vol != null)
         {
             fls = vol.findSection(sc);
-            boolean resa = false;
+
 
             if(fls.isEmpty()) {
                 System.err.println("Il n'y a pas de place dans une section " + sc +" pour ce vol.");
@@ -176,12 +185,16 @@ public class SystemManager
             while(resa == false && it.hasNext())
             {
                 FlightSection fs = it.next();
-                if(fs.hasAvailableSeat())
+                if(fs.hasAvailableSeat()) {
                     resa = fs.bookSeat(sid);
-                else
+                    reussi = resa;
+                }
+                else {
                     System.err.println("Section compl\u00e8te");
+                }
             }
         }
+        return reussi;
     }
 
     public void displaySystemDetails()

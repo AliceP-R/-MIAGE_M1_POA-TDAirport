@@ -17,7 +17,7 @@ public class Main {
         sm.createAirport("DEH"); // Existe déjà
         sm.createAirport("LEF");
 
-        sm.displaySystemDetails();
+//        sm.displaySystemDetails();
 
         //endregion
 
@@ -61,10 +61,12 @@ public class Main {
         //sm.displaySystemDetails();
 
         //region données resa vol
-        System.out.println("Avant réservation");
+        System.err.println("Avant réservation");
         sm.findAvailableFlights("JPN","DFW");
         sm.findAvailableFlights("JPN","DEN"); // Pas de vol
         sm.findAvailableFlights("LEF","JPN"); // 1 seul vol
+        sm.findAvailableFlights("LEF", "ZOZ"); // Destination inexistante
+        sm.findAvailableFlights("PAF", "LEF"); // Origine inexistante
 
         System.err.println("\nCr\u00e9ation des donn\u00e9es resa ");
         sm.bookSeat("DELTA", "258", SeatClass.FIRST, 0, 'A');
@@ -77,7 +79,7 @@ public class Main {
         sm.bookSeat("AMER", "369",SeatClass.FIRST, 0, 'A');
 
 
-        System.out.println("Après réservation");
+        System.err.println("Après réservation");
         sm.findAvailableFlights("JPN","DFW"); // Il n'y a plus qu'un seul vol incomplet
         sm.findAvailableFlights("LEF","JPN"); // Aucun vol incomplet
         //endregion
