@@ -1,9 +1,6 @@
 package SystemManager;
 
 import Elements.*;
-import MesExceptions.doublonException;
-import MesExceptions.lenghtException;
-
 import java.util.*;
 
 /**
@@ -30,16 +27,16 @@ public class SystemManager
         return dicoAero;
     }
 
-    public Airport createAirport(String code) throws doublonException, lenghtException {
+    public Airport createAirport(String code){
         Airport aero = null;
 
         if(code.length() != 3)
         {
-            throw  new lenghtException(3);
+            System.err.println("Cet ID n'a pas 3 caract\u00e8res.");
         }
         else if(dicoAero.containsKey(code))
         {
-            throw new doublonException();
+            System.err.println("Cet ID existe d\u00e9j\u00e0.");
         }
         else
         {
@@ -58,18 +55,23 @@ public class SystemManager
         return dicoAir;
     }
 
-    public void createAirline(String nom)
+    public Airline createAirline(String nom)
     {
-        Airline ligne = new Airline(nom, dicoAero);
+        Airline ligne = null;
 
         if(nom.length() > 5)
             System.err.println("Votre code a trop de caract\u00e8res");
 
-        else if(dicoAir.containsKey(ligne.getIdentifiant()))
+        else if(dicoAir.containsKey(nom))
             System.err.println("Ce code existe déjà.");
 
         else
+        {
+            ligne = new Airline(nom, dicoAero);
             dicoAir.put(ligne.getIdentifiant(), ligne);
+        }
+
+        return ligne;
     }
     //endregion
 
@@ -82,9 +84,10 @@ public class SystemManager
     }
 
     // n = compagnie
-    public void createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
+    public Flight createFlight(String n,  String  orig,  String  dest,  int year,  int month,  int day,  String id)
     {
         Airline ligne = dicoAir.get(n);
+        Flight vol = null;
         if(ligne == null)
         {
             System.err.println("Cette compagnie a\u00e9rienne n'existe pas");
@@ -92,22 +95,26 @@ public class SystemManager
         else
         {
             Calendar date = new GregorianCalendar(year, month, day);
-            Flight vol = ligne.createFlight(orig, dest, date, id);
+            vol = ligne.createFlight(orig, dest, date, id);
             if(vol != null)
                 dicoVol.put(vol.getID(), vol);
         }
 
+        return vol;
     }
     //endregion
 
     //region Section
-    public void createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s, String id)
+    public FlightSection createSection(String air, String flID, int  rows,  int  cols,  SeatClass  s, String id)
     {
+        FlightSection creation = null;
         Airline ligne = dicoAir.get(air);
         if(ligne != null)
-            ligne.createSection(flID, rows, cols, s, id);
+            creation = ligne.createSection(flID, rows, cols, s, id);
         else
             System.err.println("Cette compagnie n'existe pas.");
+
+        return creation;
     }
     //endregion
 

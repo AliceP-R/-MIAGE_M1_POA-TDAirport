@@ -1,11 +1,9 @@
 import Elements.SeatClass;
-import MesExceptions.doublonException;
-import MesExceptions.lenghtException;
 import SystemManager.SystemManager;
 
 public class Main {
 
-    public static void main(String[] args) throws doublonException, lenghtException {
+    public static void main(String[] args) {
         SystemManager sm = SystemManager.getInstance();
 
 
@@ -43,6 +41,7 @@ public class Main {
         sm.createFlight("SWEST", "DEN", "DEI", 2005, 9, 7, "657"); // Aeorport d'arrivé inexistant
         sm.createFlight("JET", "LEF", "JPN", 2000, 3, 4, "852");
         sm.createFlight("DELTA", "JPN", "DFW", 2010, 8, 11, "258");
+        sm.createFlight("ZOZO", "LEF", "DFW", 2015, 6, 15, "357"); // Compagnie inexistante
         //endregion
 
         //region données création section
